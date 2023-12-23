@@ -132,20 +132,7 @@ def load_data(file_name):
     with open(file_name) as data_file:
         data = csv.reader(data_file, delimiter=',')
         return list(data)
-
-
-'''
-# NOT USED
-# Function to find min distance between current address and the addresses of all other packages in the truck
-def min_distance_from(from_address, truck_packages):
-    min_distance = 1000
-    for delivery_addresses in truck_packages:
-        temp_distance = distance_between(from_address, delivery_addresses)
-        if temp_distance < min_distance:
-            min_distance = temp_distance
-    return min_distance
-'''
-
+        
 
 # Method to calculate the distance between two addresses based on the given distances data
 def calculate_distance(address_x, address_y, distances_data):
